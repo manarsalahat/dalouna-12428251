@@ -1,0 +1,372 @@
+/*
+   Student Name: Manar salahat
+   Student Id: 12428251
+*/
+
+:root {
+    --bg: #faf7f2;
+    --text: hwb(0 12% 88%);
+    --muted: #6b6b6b;
+    --brand: #216869;
+    --brand-2: #49a078;
+    --card: #ffffff;
+    --border: #e9e3db;
+}
+
+
+body {
+    margin: 0;
+    font-family: "Rubik", sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.5;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.site-header {
+    background-color: var(--bg);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-header .logo h1 {
+    font-size: 1.75rem;
+    color: var(--brand);
+    margin: 0;
+}
+.site-header nav ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+.site-header nav ul.nav-links a {
+    text-decoration: none;
+    color: var(--brand);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url('../images/bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+.hero-overlay {
+    padding: 20px;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+.hero-content .sub-title {
+    background-color: var(--brand-2);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    display: inline-block;
+}
+.hero-content .description {
+    font-size: 1.125rem;
+    margin: 20px 0;
+}
+.hero-content .btn {
+    text-decoration: none;
+    background-color: var(--brand);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+
+section {
+    padding: 15px 0;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+
+.about-grid,
+.menu-grid,
+.hours-grid,
+.find-us-grid {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+}
+
+
+.about-grid > *,
+.menu-grid > *,
+.hours-grid > *,
+.find-us-grid > * {
+    flex: 1;
+    min-width: 0;
+    background-color: var(--card);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+
+
+.map-container {
+    flex-grow: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.about-card > p:first-of-type,
+.chef-card > p:first-of-type {
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin: 0 0 5px 0;
+}
+
+
+.about-card > p:nth-of-type(2),
+.chef-card > p:nth-of-type(2) {
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.3;
+    margin: 0 0 5px 0;
+}
+
+
+.about-tags {
+    margin-top: auto;
+    padding-top: 8px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.tag {
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    color: var(--text);
+}
+
+
+
+.menu-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+.menu-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+
+.item-header h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    word-break: break-word;
+    line-height: 1.3;
+    color: var(--text);
+}
+
+
+.price {
+    color: var(--brand-2);
+    font-weight: 700;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+
+.item-description {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin: 2px 0 0 0;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+
+
+.hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+    gap: 8px;
+    line-height: 1.3;
+    color: var(--text);
+}
+.hours-item:last-child { border-bottom: none; }
+
+
+
+.reserve-card p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+
+.reserve-card > p:first-of-type {
+    color: var(--text);
+}
+
+
+.reserve-card > p:nth-of-type(2) {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+
+.reserve-card a {
+    word-break: break-all;
+    overflow-wrap: break-word;
+    display: inline-block;
+    color: var(--brand);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.reserve-card a:hover {
+    text-decoration: underline;
+}
+
+
+.reserve-card strong {
+    color: #000000;
+    font-weight: 700;
+}
+
+
+
+.location-info p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin: 5px 0;
+}
+
+
+.location-info > p:first-of-type {
+    color: var(--text);
+    font-weight: 600;
+}
+
+
+.location-info > p:nth-of-type(2) {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+
+
+.site-footer {
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 25px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+}
+
+
+.site-footer strong {
+    color: var(--brand);
+    font-weight: 700;
+}
+
+
+.site-footer a {
+    color:var(--brand);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+
+    .about-grid,
+    .menu-grid,
+    .hours-grid,
+    .find-us-grid {
+        flex-wrap: wrap;
+    }
+
+    .site-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .site-header .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
